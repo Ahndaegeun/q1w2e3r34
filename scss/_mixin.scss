@@ -1,0 +1,14 @@
+@mixin headerImages($image) {
+    width: 50%;
+    height: 100vh;
+    background: url($image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: filter 1s;
+    cursor: pointer;
+    &:hover {
+        filter: none;
+    }
+}
