@@ -6,6 +6,9 @@
     <title>Admin</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/admin.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 </head>
 <body>
 <div class="body__container">
@@ -17,26 +20,92 @@
 
     <nav>
         <ul>
-            <li><a href="#" class="first-menu">Dashboard</a></li>
-            <li><a href="#" class="second-menu">Add / remove</a></li>
+            <li><a href="#first-menu" class="first-menu">Dashboard</a></li>
+            <li><a href="#second-menu" class="second-menu">Add / remove</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="graph__section">
+        <div id="first-menu" class="section dashboard__section">
+            <section class="count__section">
+                <ul class="today">
+                    <li>Today</li>
+                    <li>500</li>
+                </ul>
+                <ul class="week">
+                    <li>Week</li>
+                    <li>500</li>
+                </ul>
+                <ul class="total">
+                    <li>Total</li>
+                    <li>500</li>
+                </ul>
+                <div class="graph__section">
 
-        </section>
-        <section class="comment__section">
-
-        </section>
-        <section class="add__section">
-
-        </section>
-        <section class="remove__section">
-
-        </section>
+                </div>
+            </section>
+            <section class="comment__section">
+                <div class="mail-list">
+                    <ul>
+                        <li>안녕하세요.</li>
+                        <li>같이 작업하고 싶어요.</li>
+                        <li>촬영 가능 할까요?</li>
+                        <li>제품 사진 촬영은 안하시나요?</li>
+                        <li>너무 잘 찍으세요.</li>
+                        <li>안녕하세요.</li>
+                        <li>같이 작업하고 싶어요.</li>
+                        <li>촬영 가능 할까요?</li>
+                        <li>제품 사진 촬영은 안하시나요?</li>
+                        
+                    </ul>
+                </div>
+                <div class="view-section">
+                    <h1>title</h1>
+                    <div class="name">name</div>
+                    <div class="email">email</div>
+                    <div class="phone">number</div>
+                    <p class="contents">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta porro voluptatum earum assumenda! Nam soluta voluptas natus officiis enim ipsam quibusdam deserunt dolores illo? Corporis provident aliquam, nostrum alias maxime nesciunt perspiciatis?
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="second-menu" class="section add-remove__section">
+            <section class="add__section">
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Title">
+                    <input type="file">
+                    <img src="/images/Daily1.jpg" alt="#">
+                    <button type="submit">Add</button>
+                </form>
+            </section>
+            <section class="remove__section">
+                <ul>
+                    <li>photo-item</li>
+                    <li>photo-item</li>
+                    <li>photo-item</li>
+                    <li>photo-item</li>
+                    <li>photo-item</li>
+                </ul>
+                <ul>
+                    <li>video-item</li>
+                    <li>video-item</li>
+                    <li>video-item</li>
+                    <li>video-item</li>
+                    <li>video-item</li>
+                </ul>
+                <ul>
+                    <li>myWork-item</li>
+                    <li>myWork-item</li>
+                    <li>myWork-item</li>
+                    <li>myWork-item</li>
+                    <li>myWork-item</li>
+                </ul>
+            </section>
+        </div>
     </main>
 
 </div>
+<script src="scroll-admin.js"></script>
 </body>
 </html>

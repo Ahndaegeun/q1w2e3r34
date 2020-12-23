@@ -59,17 +59,172 @@
                     border-left: .5rem solid $adminBackground;
                     &:hover {
                         border-color: $pointColor;
-                        color: $pointColor
+                        color: $pointColor;
                     }
                 }
             }
         }
     }
     main {
+        scroll-behavior: smooth;
         width: calc(100% - 29rem);
-        height: 100%;
+        height: calc(100vh - 6.8rem);
         background: $adminSubBackground;
         margin-left: auto;
         overflow-y: scroll;
+        -ms-overflow-style: none !important; /* IE and Edge */
+        scrollbar-width: none !important; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none !important; /* Chrome, Safari, Opera*/
+        }
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        .dashboard__section {
+            height: calc(100vh - 6.8rem);
+            display: grid;
+            grid-template-rows: 50% 50%;
+            .count__section {
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0 5rem;
+                color: $white;
+                ul {
+                    width: 5vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    background: $adminBackground;
+                    padding: 1rem 1.8rem;
+                    border-radius: .5rem;
+                    li {
+                       &:nth-child(1) {
+                           margin-bottom: 2rem;
+                       }
+                       &:nth-child(2) {
+                           font-weight: bold;
+                       } 
+                    }
+                }
+                .graph__section {
+                    width: 55rem;
+                    height: 30rem;
+                    background: $pointColor;
+                    border-radius: .5rem;
+                }
+            }
+            .comment__section {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 5rem;
+                color: $white;
+                .mail-list {
+                    width: 50%;
+                    height: 100%;
+                    ul {
+                        width: 100%;
+                        height: 100%;
+                        display: grid;
+                        grid-auto-rows: 4.5rem;
+                        align-items: center;
+                        overflow-y: scroll;
+                        -ms-overflow-style: none !important; /* IE and Edge */
+                        scrollbar-width: none !important; /* Firefox */
+                        &::-webkit-scrollbar {
+                            display: none !important; /* Chrome, Safari, Opera*/
+                        }
+                        li {
+                            padding: .3rem .5rem;
+                            border-bottom: 1px solid $gray;
+                            line-height: 1.5;
+                            width: 50%;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .view-section {
+                    width: 50%;
+                    height: 100%;
+                    padding: .3rem 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    h1 {
+                        font-size: 3.2rem;
+                        font-weight: bold;
+                    }
+                    p {
+                        height: 60%;
+                    }
+                }
+            }
+
+        }
+        .add-remove__section {
+            height: calc(100vh - 6.8rem);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .add__section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                form {
+                    height: 80%;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    input {
+                        background: $adminBackground;
+                        border: none;
+                        outline: none;
+                        padding: .3rem .5rem;
+                        font-size: 2rem;
+                        margin-bottom: 3rem;
+                    }
+                    img {
+                        margin-bottom: 3rem;
+                    }
+                    button {
+                        background: $adminBackground;
+                        border: none;
+                        border-radius: .5rem;
+                        outline: none;
+                        color: $white;
+                        padding: 1rem 3rem;
+                        font-size: 2.4rem;
+                        cursor: pointer;
+                        &:hover {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+            .remove__section {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                color: $white;
+                ul {
+                    width: 100%;
+                    height: 33%;
+                    overflow-y: scroll;
+                    background: $adminBackground;
+                    padding: 1rem;
+                    li {
+                        font-size: 2.4rem;
+                        margin-bottom: 1rem;
+                        cursor: pointer;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
     }
 }
