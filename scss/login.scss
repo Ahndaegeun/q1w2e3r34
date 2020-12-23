@@ -1,0 +1,61 @@
+@import "_variable";
+@import "_mixin";
+
+.body__container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    section {
+        height: 100%;
+        background: $background;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & * {
+            font-size: 2.8rem;
+        }
+        form {
+            width: 20vw;
+            padding: 3rem 5rem;
+            border-radius: 1rem;
+            background: $login;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                margin-bottom: 5rem;
+                font-size: 3.4rem;
+                font-weight: bold;
+                color: $light-gray;
+            }
+            input {
+                width: 100%;
+                padding: 1rem .5rem;
+                outline: none;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                border-bottom: 2px solid $line;
+                margin-bottom: 1rem;
+                color: $white;
+                &:nth-child(3) {
+                    margin-bottom: 5rem;
+                }
+            }
+            button {
+                padding: .5rem 2rem;
+                outline: none;
+                border: 2px solid $line;
+                border-radius: .5rem;
+                background: $black;
+                color: $line;
+                cursor: pointer;
+                align-self: flex-end;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

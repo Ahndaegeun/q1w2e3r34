@@ -1,0 +1,75 @@
+@import "_variable";
+@import "_mixin";
+
+.body__container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    & * {
+        box-sizing: border-box;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        background: $white;
+        h1 {
+            width: 19rem;
+            background: $pointColor;
+            color: $white;
+            padding: 2rem 5rem;
+            font-size: 2.4rem;
+            font-weight: bold;
+            box-sizing: content-box;
+        }
+        button {
+            border: none;
+            font-size: 2.4rem;
+            font-weight: bold;
+            padding: 2rem 5rem;
+            color: $light-gray;
+            cursor: pointer;
+            outline: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    nav {
+        height: 100%;
+        width: 29rem;
+        position: fixed;
+        left: 0;
+        top: 6.8rem;
+        background: $adminBackground;
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 5rem;
+            font-size: 2.4rem;
+            color: $white;
+            text-align: center;
+            li {
+                width: 100%;
+                margin-bottom: 2rem;
+                a {
+                    display: block;
+                    width: 100%;
+                    border-left: .5rem solid $adminBackground;
+                    &:hover {
+                        border-color: $pointColor;
+                        color: $pointColor
+                    }
+                }
+            }
+        }
+    }
+    main {
+        width: calc(100% - 29rem);
+        height: 100%;
+        background: $adminSubBackground;
+        margin-left: auto;
+        overflow-y: scroll;
+    }
+}
