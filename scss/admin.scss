@@ -3,7 +3,7 @@
 
 .body__container {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     & * {
         box-sizing: border-box;
@@ -41,6 +41,10 @@
         left: 0;
         top: 6.8rem;
         background: $adminBackground;
+        .on {
+            border-color: $pointColor;
+            color: $pointColor;
+        }
         ul {
             display: flex;
             flex-direction: column;
@@ -57,6 +61,7 @@
                     display: block;
                     width: 100%;
                     border-left: .5rem solid $adminBackground;
+                    transition: all .3s;
                     &:hover {
                         border-color: $pointColor;
                         color: $pointColor;
@@ -125,24 +130,28 @@
                 .mail-list {
                     width: 50%;
                     height: 100%;
+                    display: grid;
+                    grid-auto-rows: 3.3rem;
+                    overflow-y: scroll;
+                    -ms-overflow-style: none !important; /* IE and Edge */
+                    scrollbar-width: none !important; /* Firefox */
+                    &::-webkit-scrollbar {
+                        display: none !important; /* Chrome, Safari, Opera*/
+                    }
                     ul {
                         width: 100%;
-                        height: 100%;
                         display: grid;
-                        grid-auto-rows: 4.5rem;
-                        align-items: center;
-                        overflow-y: scroll;
-                        -ms-overflow-style: none !important; /* IE and Edge */
-                        scrollbar-width: none !important; /* Firefox */
-                        &::-webkit-scrollbar {
-                            display: none !important; /* Chrome, Safari, Opera*/
-                        }
+                        grid-template-columns: .5fr 5fr 1fr;
+                        background: $adminSubBackground;
+                        border: .1rem solid $white;
                         li {
                             padding: .3rem .5rem;
-                            border-bottom: 1px solid $gray;
                             line-height: 1.5;
                             width: 50%;
                             cursor: pointer;
+                            &:hover {
+                                color: $light-gray;
+                            }
                         }
                     }
                 }
@@ -206,22 +215,35 @@
                 }
             }
             .remove__section {
+                height: calc(100vh - 6.8rem);
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: flex-start;
                 align-items: center;
                 color: $white;
                 ul {
                     width: 100%;
-                    height: 33%;
+                    height: 33.3333333%;
                     overflow-y: scroll;
+                    -ms-overflow-style: none !important; /* IE and Edge */
+                    scrollbar-width: none !important; /* Firefox */
+                    &::-webkit-scrollbar {
+                        display: none !important; /* Chrome, Safari, Opera*/
+                    }
                     background: $adminBackground;
                     padding: 1rem;
+                    display: grid;
+                    grid-auto-rows: 3.6rem;
+                    &:nth-child(2) {
+                        background: $adminSubBackground;
+                    }
                     li {
                         font-size: 2.4rem;
-                        margin-bottom: 1rem;
                         cursor: pointer;
                         line-height: 1.5;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
