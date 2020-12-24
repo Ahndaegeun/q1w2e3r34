@@ -446,3 +446,119 @@
         width: 50%;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .body__container {
+        main {
+            footer {
+                grid-template-columns: 1fr 1fr;
+                .user-img {
+                    background-position: 70% center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .body__container {
+        nav {
+            padding: .5rem 0;
+            h1 {
+                font-size: 2.4rem;
+            }
+            .gotohome {
+                font-size: 2.4rem;
+            }
+            ul {
+                width: 100%;
+                padding: 0 3rem;
+                grid-template-columns: 2fr 1.2fr 1fr;
+                font-size: 1.6rem;
+                li {
+                    a {
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+        main {
+            position: relative;
+            .myWork-section {
+                padding: 15vh 10vw;
+            }
+            footer {
+                background: $cement;
+                padding: 10vh 15vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .profile-section {
+                    width: 100%;
+                    height: 50vh;
+                    padding: 2vh 1vw;
+                    .user-img {
+                        width: 100%;
+                        height: 50vh;
+                    }
+                    ul {
+                        z-index: 2;
+                        text-indent: -500px;
+                        transition: text-indent .5s;
+                        margin-bottom: 1.5rem;
+                        font-family: $contents;
+                        .profile-title {
+                            font-size: 2.4rem;
+                            font-weight: 500;
+                            color: $black;
+                            margin-bottom: .5rem;
+                        }
+                        .profile-description {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            color: $white;
+                            a {
+                                color: $light-gray;
+                                text-decoration: underline;
+                                &:hover {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .connect-section {
+                    height: 50vh;
+                    padding: 3vh 2vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    font-family: $contents;
+                    h2 {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        margin: 0 auto 2rem;
+                        color: $white;
+                    }
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        & * {
+                            outline: none;
+                            border: none;
+                            margin-bottom: 1.5rem;
+                            border-radius: .5rem;
+                            background: $light-gray;
+                            color: $black;
+                            padding: .5rem 1rem;
+                        }
+                        textarea {
+                            height: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
