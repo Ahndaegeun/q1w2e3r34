@@ -3,5 +3,6 @@ $.scrollify({
     interstitialSection : "header, #mywork, connect",
     easing: "easeOutExpo",
     scrollSpeed: 500,
-    scrollbars: false
+    scrollbars: false,
+    standardScrollElements: '.mywork-imgs'
     });
